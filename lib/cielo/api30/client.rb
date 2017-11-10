@@ -39,7 +39,7 @@ module Cielo
       # @param payment_id [String] The payment_id to be queried
       # @param amount [Integer] Order value in cents
       # @return [Payment] The cancelled payment
-      def cancel_payment(payment_id, amount=nil)
+      def cancel_sale(payment_id, amount=nil)
         request = Cielo::API30::Request::UpdateSaleRequest.new("void", merchant, environment)
 
         request.amount = amount
